@@ -1,4 +1,4 @@
-export const enum ZodiacSigns
+export enum ZodiacSigns
 {
     Pisces,
     Aquarius,

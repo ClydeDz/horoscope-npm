@@ -12,67 +12,61 @@ export const GetZodiacSign = (sign: ZodiacSigns): ZodiacModel | undefined => {
 } 
 
 export const GetZodiacSignForDate = (requestedDateTime: Date) => {
-    /*
-    (z.ZodiacStartDate.Month == requestedDateTime.Month && requestedDateTime.Day >= z.ZodiacStartDate.Date) 
-    || (z.ZodiacEndDate.Month == requestedDateTime.Month && requestedDateTime.Day <= z.ZodiacEndDate.Date));
-     */
-    
-    var sign = getAllZodiacSigns().forEach(sign => 
-        (sign.start.month === requestedDateTime.getMonth() && requestedDateTime.getDate() >= sign.start.date)
-        || (sign.end.month === requestedDateTime.getMonth() && requestedDateTime.getDate() <= sign.end.date))
-    return null;
+    return Array.from(getAllZodiacSigns().values()).filter(sign => 
+        (sign.start.month === requestedDateTime.getMonth()+1 && requestedDateTime.getDate() >= sign.start.date) 
+        || (sign.end.month === requestedDateTime.getMonth()+1 && requestedDateTime.getDate() <= sign.end.date))
+        .at(0);
 } 
 
 export const getAllZodiacSigns = () => {    
     const zodiacSigns = new Map<ZodiacSigns, ZodiacModel>();
 
     zodiacSigns.set(ZodiacSigns.Pisces, new ZodiacModel(
-        ZodiacSigns.Pisces.toString(), "The Fish", new ZodiacDate(5, Months.March), new ZodiacDate(5, Months.March),
+        ZodiacSigns[ZodiacSigns.Pisces], "The Fish", new ZodiacDate(19, Months.February), new ZodiacDate(20, Months.March),
     )); 
 
     zodiacSigns.set(ZodiacSigns.Virgo, new ZodiacModel(
-        ZodiacSigns.Virgo.toString(), "The Virgin", new ZodiacDate(23, 8), new ZodiacDate(22, 9)
+        ZodiacSigns[ZodiacSigns.Virgo], "The Virgin", new ZodiacDate(23, Months.August), new ZodiacDate(22, Months.September)
     )); 
 
     zodiacSigns.set(ZodiacSigns.Taurus, new ZodiacModel(
-        ZodiacSigns.Taurus.toString(), "The Bull", new ZodiacDate(20, 4), new ZodiacDate(20, 5)
+        ZodiacSigns[ZodiacSigns.Taurus], "The Bull", new ZodiacDate(20, Months.April), new ZodiacDate(20, Months.May)
     )); 
 
     zodiacSigns.set(ZodiacSigns.Scorpio, new ZodiacModel(
-        ZodiacSigns.Scorpio.toString(), "The Scorpion", new ZodiacDate(23, 10), new ZodiacDate(21, 11)
+        ZodiacSigns[ZodiacSigns.Scorpio], "The Scorpion", new ZodiacDate(23, Months.October), new ZodiacDate(21, Months.November)
     )); 
 
     zodiacSigns.set(ZodiacSigns.Sagittarius, new ZodiacModel(
-        ZodiacSigns.Sagittarius.toString(), "The Archer", new ZodiacDate(22, 11), new ZodiacDate(21, 12)
+        ZodiacSigns[ZodiacSigns.Sagittarius], "The Archer", new ZodiacDate(22, Months.November), new ZodiacDate(21, Months.December)
     )); 
 
     zodiacSigns.set(ZodiacSigns.Libra, new ZodiacModel(
-        ZodiacSigns.Libra.toString(), "The Scales", new ZodiacDate(23, 9), new ZodiacDate(22, 10)
+        ZodiacSigns[ZodiacSigns.Libra], "The Scales", new ZodiacDate(23, Months.September), new ZodiacDate(22, Months.October)
     ));
 
     zodiacSigns.set(ZodiacSigns.Leo, new ZodiacModel(
-        ZodiacSigns.Leo.toString(), "The Lion", new ZodiacDate(23, 7), new ZodiacDate(22, 8)
+        ZodiacSigns[ZodiacSigns.Leo], "The Lion", new ZodiacDate(23, Months.July), new ZodiacDate(22, Months.August)
     )); 
 
     zodiacSigns.set(ZodiacSigns.Gemini, new ZodiacModel(
-        ZodiacSigns.Gemini.toString(), "The Twins", new ZodiacDate(21, 5), new ZodiacDate(20, 6)
+        ZodiacSigns[ZodiacSigns.Gemini], "The Twins", new ZodiacDate(21, Months.May), new ZodiacDate(20, Months.June)
     )); 
 
     zodiacSigns.set(ZodiacSigns.Capricorn, new ZodiacModel(
-        ZodiacSigns.Capricorn.toString(), "The Goat", new ZodiacDate(22, 12), new ZodiacDate(19, 1)
+        ZodiacSigns[ZodiacSigns.Capricorn], "The Goat", new ZodiacDate(22, Months.December), new ZodiacDate(19, Months.January)
     )); 
 
     zodiacSigns.set(ZodiacSigns.Cancer, new ZodiacModel(
-        ZodiacSigns.Cancer.toString(), "The Crab", new ZodiacDate(21, 6), new ZodiacDate(22, 7)
+        ZodiacSigns[ZodiacSigns.Cancer], "The Crab", new ZodiacDate(21, Months.June), new ZodiacDate(22, Months.July)
     )); 
 
     zodiacSigns.set(ZodiacSigns.Aquarius, new ZodiacModel(
-        ZodiacSigns.Aquarius.toString(), "The Water-Bearer", new ZodiacDate(20, 1), new ZodiacDate(18, 2)
+        ZodiacSigns[ZodiacSigns.Aquarius], "The Water-Bearer", new ZodiacDate(20, Months.January), new ZodiacDate(18, Months.February)
     )); 
 
-    // 
     zodiacSigns.set(ZodiacSigns.Aries, new ZodiacModel(
-        ZodiacSigns.Aries.toString(), "The Water-Bearer", new ZodiacDate(20, 1), new ZodiacDate(18, 2)
+        ZodiacSigns[ZodiacSigns.Aries], "The Ram", new ZodiacDate(21, Months.March), new ZodiacDate(19, Months.April)
     )); 
 
     return zodiacSigns;
