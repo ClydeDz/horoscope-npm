@@ -1,3 +1,4 @@
-import {} from "@clydedsouza/horoscope"
-console.log("hello world")
+import {getAllZodiacSigns} from "@clydedsouza/horoscope"
+
+console.log("hello world", getAllZodiacSigns())
  

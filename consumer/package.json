@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  
   "scripts": {
     "start": "node index.ts"
   },
@@ -10,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@clydedsouza/horoscope": "^0.0.3",
+    "@clydedsouza/horoscope": "^0.0.4",
     "typescript": "^5.3.3"
   }
 }
