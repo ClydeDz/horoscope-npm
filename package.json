@@ -1,7 +1,7 @@
 {
   "name": "@clydedsouza/horoscope",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "A library for Zodiac signs. Get details on each Zodiac sign, pass a date and know which Zodiac sign it falls in or get a list of all Zodiac signs.",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
@@ -9,6 +9,9 @@
     "build": "tsc",
     "m": "ts-jest config:migrate ./jest.config.js"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
