@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals'
-import { GetZodiacSignForDate, getAllZodiacSigns } from "./Zodiac"
+import { getZodiacSignForDate, getAllZodiacSigns } from "./Zodiac"
 import { ZodiacSigns } from './types/ZodiacSigns'
 
 describe('Zodiac', () => {
@@ -12,12 +12,12 @@ describe('Zodiac', () => {
 
     describe('GetZodiacSignForDate', () => {
         test('returns Piscess', () => {
-            var signs = GetZodiacSignForDate(new Date("2 March 1995"))
+            var signs = getZodiacSignForDate(new Date("2 March 1995"))
             expect(signs?.name)?.toBe(ZodiacSigns[ZodiacSigns.Pisces])
         }) 
 
         test('returns Piscess', () => {
-            var signs = GetZodiacSignForDate(new Date("2 Abc 1995"))
+            var signs = getZodiacSignForDate(new Date("2 Abc 1995"))
             expect(signs?.name)?.toBe(undefined)
         }) 
     }) 
