@@ -12,15 +12,15 @@ import { ZodiacSigns } from "./types/ZodiacSigns";
 // ChineseZodiacElements GetChineseZodiacElementBasedOnYear(int year)
 // List<ChineseZodiacModel> GetAllZodiacSignsForYinYang(YinYang yinOrYang)
 
-export const getZodiacSign = (sign: ChineseZodiacSigns): ChineseZodiacModel | undefined => {
-    return getAllZodiacSigns().get(sign);
+export const getChineseZodiacSign = (sign: ChineseZodiacSigns): ChineseZodiacModel | undefined => {
+    return getAllChineseZodiacSigns().get(sign);
 } 
 
 
 // new ZodiacDate(6, 2003),
 // new ZodiacDate(5, 2023),
 
-const getAllZodiacSigns = () => {    
+export const getAllChineseZodiacSigns = () => {    
     const zodiacSigns = new Map<ChineseZodiacSigns, ChineseZodiacModel>();
 
     zodiacSigns.set(ChineseZodiacSigns.Rat, new ChineseZodiacModel(

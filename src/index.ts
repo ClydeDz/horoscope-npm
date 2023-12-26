@@ -1,4 +1,8 @@
-import { GetZodiacSign, GetZodiacSignForDate, getAllZodiacSigns } from "./Zodiac"
-import { getZodiacSign } from "./ChineseZodiac"
+// import { getZodiacSign, getZodiacSignForDate, getAllZodiacSigns } from "./Zodiac"
+// import { getChineseZodiacSign, getAllChineseZodiacSigns } from "./ChineseZodiac"
 
-export default { GetZodiacSign, GetZodiacSignForDate, getAllZodiacSigns, getZodiacSign }
+//export getZodiacSign, getZodiacSignForDate, getAllZodiacSigns
+//export getZodiacSign, getZodiacSignForDate, getAllZodiacSigns, getChineseZodiacSign, getAllChineseZodiacSigns
+
+export * from "./Zodiac"
+export * from "./ChineseZodiac"

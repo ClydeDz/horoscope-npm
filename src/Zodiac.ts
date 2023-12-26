@@ -7,11 +7,11 @@ import { ZodiacSigns } from "./types/ZodiacSigns";
 // ZodiacModel GetZodiacSign(ZodiacSigns requestedZodiacSign)
 // List<ZodiacModel> GetAllZodiacSigns()
 
-export const GetZodiacSign = (sign: ZodiacSigns): ZodiacModel | undefined => {
+export const getZodiacSign = (sign: ZodiacSigns): ZodiacModel | undefined => {
     return getAllZodiacSigns().get(sign);
 } 
 
-export const GetZodiacSignForDate = (requestedDateTime: Date) => {
+export const getZodiacSignForDate = (requestedDateTime: Date) => {
     return Array.from(getAllZodiacSigns().values()).filter(sign => 
         (sign.start.month === requestedDateTime.getMonth()+1 && requestedDateTime.getDate() >= sign.start.date) 
         || (sign.end.month === requestedDateTime.getMonth()+1 && requestedDateTime.getDate() <= sign.end.date))
