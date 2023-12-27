@@ -3,12 +3,6 @@ import { ZodiacDate } from './types/ZodiacDate'
 import { ZodiacModel } from './types/ZodiacModel'
 import { ZodiacSigns } from './types/ZodiacSigns'
 
-/**
-ZodiacModel GetZodiacSignForDate(DateTime requestedDateTime)
-ZodiacModel GetZodiacSign(ZodiacSigns requestedZodiacSign)
-List<ZodiacModel> GetAllZodiacSigns()
- */
-
 export const getZodiacSign = (sign: ZodiacSigns): ZodiacModel | undefined => {
   return getAllZodiacSigns().get(sign)
 }
