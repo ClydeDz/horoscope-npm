@@ -1,6 +1,6 @@
 {
   "name": "@clydedsouza/horoscope",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A library for Zodiac signs. Get details on each Zodiac sign, pass a date and know which Zodiac sign it falls in or get a list of all Zodiac signs.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

@@ -1,7 +1,7 @@
 export enum ChineseZodiacElements {
-  Wood,
-  Fire,
-  Earth,
-  Metal,
-  Water,
+  Wood = "Wood",
+  Fire = "Fire",
+  Earth = "Earth",
+  Metal = "Metal",
+  Water = "Water",
 }

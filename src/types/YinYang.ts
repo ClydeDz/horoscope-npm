@@ -1,4 +1,4 @@
 export enum YinYang {
-  Yin,
-  Yang,
+  Yin = "Yin",
+  Yang = "Yang",
 }

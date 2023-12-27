@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@clydedsouza/horoscope": "^0.0.5",
+    "@clydedsouza/horoscope": "^0.0.6",
     "typescript": "^5.3.3"
   }
 }

@@ -1,4 +1,5 @@
 import { ChineseZodiacElements } from "./ChineseZodiacElements";
+import { Months } from "./Months";
 import { YinYang } from "./YinYang";
 import { ZodiacDate } from "./ZodiacDate";
 
@@ -26,7 +27,7 @@ export class ZodiacModel extends BaseZodiacModel implements IZodiacModel {
         super(name, englishTranslation);
         this.start = startDate;
         this.end = endDate;
-        this.duration = `${this.start.month} ${this.start.date} to ${this.end.month} ${this.end.date}`;
+        this.duration = `${Months[this.start.month]} ${this.start.date} to ${Months[this.end.month]} ${this.end.date}`;
     }
 }
 
