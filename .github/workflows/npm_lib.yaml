@@ -47,6 +47,12 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
 
+      - name: Update scope name in package json file for GitHub
+        uses: restack/update-json-values-action@v1.0.0
+        with:
+          file: package.json
+          values: "{'@clydedsouza/horoscope': '@clydedz/horoscope'}"
+
       - name: Publish package to GitHub
         id: publishgithub
         uses: JS-DevTools/npm-publish@v2
