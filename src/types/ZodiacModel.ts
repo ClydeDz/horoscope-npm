@@ -20,15 +20,13 @@ class BaseZodiacModel {
 export class ZodiacModel extends BaseZodiacModel implements IZodiacModel {
     start: ZodiacDate;
     end: ZodiacDate;
+    readonly duration: string;
     
     constructor(name: string, englishTranslation: string, startDate: ZodiacDate, endDate: ZodiacDate) {
         super(name, englishTranslation);
         this.start = startDate;
         this.end = endDate;
-    }
-
-    public duration() {
-        return `${this.start.month} ${this.start.date} to ${this.end.month} ${this.end.date}`;
+        this.duration = `${this.start.month} ${this.start.date} to ${this.end.month} ${this.end.date}`;
     }
 }
 

@@ -1,15 +1,15 @@
 export enum ZodiacSigns
 {
-    Pisces,
-    Aquarius,
-    Virgo,
-    Taurus,
-    Scorpio,
-    Sagittarius,
-    Libra,
-    Leo,
-    Gemini,
-    Capricorn,
-    Cancer,
-    Aries
+    Pisces = "Pisces",
+    Aquarius = "Aquarius",
+    Virgo = "Virgo",
+    Taurus = "Taurus",
+    Scorpio = "Scorpio",
+    Sagittarius = "Sagittarius",
+    Libra = "Libra",
+    Leo = "Leo",
+    Gemini = "Gemini",
+    Capricorn = "Capricorn",
+    Cancer = "Cancer",
+    Aries = "Aries",
 }

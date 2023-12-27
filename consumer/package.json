@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   
   "scripts": {
-    "start": "node index.ts"
+    "start": "tsc && node ./index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@clydedsouza/horoscope": "^0.0.4",
+    "@clydedsouza/horoscope": "^0.0.5",
     "typescript": "^5.3.3"
   }
 }
