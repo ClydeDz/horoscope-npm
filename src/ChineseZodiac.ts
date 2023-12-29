@@ -53,7 +53,7 @@ export const getChineseZodiacSignForDate = (
 }
 
 /**
- * Gets the Chinese zodiac element based on the year. 
+ * Gets the Chinese zodiac element based on the year.
  * This is different from the fixed element which is
  * strongly associated with one or more zodiac sign.
  * @param year The year you want the zodiac element for.

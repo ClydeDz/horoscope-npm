@@ -17,7 +17,9 @@ export const getZodiacSign = (sign: ZodiacSigns): ZodiacModel | undefined => {
  * @param requestedDateTime The date for which you want the zodiac sign.
  * @returns A zodiac sign object.
  */
-export const getZodiacSignForDate = (requestedDateTime: Date): ZodiacModel | undefined => {
+export const getZodiacSignForDate = (
+  requestedDateTime: Date
+): ZodiacModel | undefined => {
   return Array.from(getAllZodiacSigns().values())
     .filter(
       (sign) =>
