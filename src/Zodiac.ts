@@ -3,11 +3,21 @@ import { ZodiacDate } from './types/ZodiacDate'
 import { ZodiacModel } from './types/ZodiacModel'
 import { ZodiacSigns } from './types/ZodiacSigns'
 
+/**
+ * Get details of the zodiac sign supplied.
+ * @param sign The zodiac sign that you want more details about.
+ * @returns A zodiac sign object.
+ */
 export const getZodiacSign = (sign: ZodiacSigns): ZodiacModel | undefined => {
   return getAllZodiacSigns().get(sign)
 }
 
-export const getZodiacSignForDate = (requestedDateTime: Date) => {
+/**
+ * Gets the zodiac sign for the date supplied.
+ * @param requestedDateTime The date for which you want the zodiac sign.
+ * @returns A zodiac sign object.
+ */
+export const getZodiacSignForDate = (requestedDateTime: Date): ZodiacModel | undefined => {
   return Array.from(getAllZodiacSigns().values())
     .filter(
       (sign) =>
@@ -19,7 +29,11 @@ export const getZodiacSignForDate = (requestedDateTime: Date) => {
     .at(0)
 }
 
-export const getAllZodiacSigns = () => {
+/**
+ * Gets all zodiac signs and details for each sign.
+ * @returns List of zodiac signs each as a zodiac sign object.
+ */
+export const getAllZodiacSigns = (): Map<ZodiacSigns, ZodiacModel> => {
   const zodiacSigns = new Map<ZodiacSigns, ZodiacModel>()
 
   zodiacSigns.set(

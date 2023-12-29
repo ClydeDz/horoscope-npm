@@ -3,12 +3,22 @@ import { ChineseZodiacSigns } from './types/ChineseZodiacSigns'
 import { YinYang } from './types/YinYang'
 import { ChineseZodiacModel } from './types/ZodiacModel'
 
+/**
+ * Get details of the zodiac sign supplied.
+ * @param sign The zodiac sign that you want more details about.
+ * @returns A Chinese zodiac sign object.
+ */
 export const getChineseZodiacSign = (
   sign: ChineseZodiacSigns
 ): ChineseZodiacModel | undefined => {
   return getAllChineseZodiacSigns().get(sign)
 }
 
+/**
+ * Get the Chinese zodiac sign for the supplied date.
+ * @param requestedDateTime The date you want to query.
+ * @returns Returns a Chinese zodiac sign object.
+ */
 export const getChineseZodiacSignForDate = (
   requestedDateTime: Date
 ): ChineseZodiacModel | undefined => {
@@ -42,6 +52,13 @@ export const getChineseZodiacSignForDate = (
   }
 }
 
+/**
+ * Gets the Chinese zodiac element based on the year. 
+ * This is different from the fixed element which is
+ * strongly associated with one or more zodiac sign.
+ * @param year The year you want the zodiac element for.
+ * @returns The Chinese zodiac element for the supplied year.
+ */
 export const getChineseZodiacElementBasedOnYear = (
   year: number
 ): ChineseZodiacElements => {
@@ -64,6 +81,12 @@ export const getChineseZodiacElementBasedOnYear = (
   }
 }
 
+/**
+ * Gets all zodiac signs that are associated with either Yin or Yang.
+ * This is a fixed yinyang-to-zodiac-sign association.
+ * @param yinOrYang Supply either Yin or Yang.
+ * @returns Returns a list of Chinese zodiac signs that match the YinYang filter.
+ */
 export const getAllChineseZodiacSignsForYinYang = (
   yinOrYang: YinYang
 ): ChineseZodiacModel[] => {
@@ -72,6 +95,12 @@ export const getAllChineseZodiacSignsForYinYang = (
   )
 }
 
+/**
+ * Gets all zodiac signs that are associated with the zodiac element supplied.
+ * This is a fixed element-to-zodiac-sign association.
+ * @param element The zodiac element that you want to query.
+ * @returns Returns a list of Chinese zodiac signs that are associated with the supplied zodiac element.
+ */
 export const getAllChineseZodiacSignsForAnElement = (
   element: ChineseZodiacElements
 ): ChineseZodiacModel[] => {
@@ -80,6 +109,10 @@ export const getAllChineseZodiacSignsForAnElement = (
   )
 }
 
+/**
+ * Gets all zodiac signs and details for each sign.
+ * @returns List of zodiac signs each as a zodiac sign object.
+ */
 export const getAllChineseZodiacSigns = () => {
   const zodiacSigns = new Map<ChineseZodiacSigns, ChineseZodiacModel>()
 
