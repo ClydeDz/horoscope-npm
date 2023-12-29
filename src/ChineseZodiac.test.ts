@@ -15,7 +15,7 @@ describe('Chinese zodiac', () => {
   describe('getAllChineseZodiacSigns', () => {
     test('returns 12 signs', () => {
       const signs = getAllChineseZodiacSigns()
-      expect(signs.size)?.toBe(12)
+      expect(signs.length)?.toBe(12)
     })
   })
 

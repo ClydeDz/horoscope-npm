@@ -6,7 +6,9 @@
     "declaration": true,
     "outDir": "./dist",
     "esModuleInterop": true,
-    "allowJs": true
+    "allowJs": true,
+    "stripInternal": true,
+    "checkJs": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules/**/*", "consumer/**/*", "**/*.test.ts"]

@@ -10,7 +10,7 @@ describe('Zodiac', () => {
   describe('getAllZodiacSigns', () => {
     test('returns 12 signs', () => {
       const signs = getAllZodiacSigns()
-      expect(signs.size)?.toBe(12)
+      expect(signs.length)?.toBe(12)
     })
   })
 
