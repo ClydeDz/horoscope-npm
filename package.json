@@ -15,8 +15,27 @@
   "files": [
     "dist"
   ],
-  "keywords": [],
+  "keywords": [
+    "horoscope",
+    "zodiac",
+    "development",
+    "library",
+    "zodiac signs",
+    "Chinese zodiac",
+    "Chinese horoscope",
+    "yinyang",
+    "Chinese elements",
+    "yin yang"
+  ],
   "author": "Clyde D'Souza",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClydeDz/horoscope-npm"
+  },
+  "bugs": {
+    "url": "https://github.com/ClydeDz/horoscope-npm/issues"
+  },
+  "homepage": "https://github.com/ClydeDz/horoscope-npm#readme",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.11",
