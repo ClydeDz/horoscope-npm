@@ -18,6 +18,8 @@ This package is also published in the GitHub registry. This URL will need to be 
 
 ```bash
 @clydedz:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=<GitHub personal access token>
+always-auth=true
 ```
 
 And then from the command line you'll need to run the installation command. 
@@ -26,9 +28,19 @@ npm i @clydedz/horoscope
 ```
   
 ### Usage
-Include the namespace in your program.
+#### NPM
+Import the required methods from `@clydedsouza/horoscope`.
+
 ```typescript
 import { getZodiacSignForDate } from '@clydedsouza/horoscope'
+
+const sign = getZodiacSignForDate(new Date('2 March 1995'))
+```
+#### GitHub
+Import the required methods from `@clydedz/horoscope`.
+
+```typescript
+import { getZodiacSignForDate } from '@clydedz/horoscope'
 
 const sign = getZodiacSignForDate(new Date('2 March 1995'))
 ```
