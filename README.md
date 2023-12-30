@@ -7,7 +7,7 @@
 
 ## @clydedsouza/horoscope
 
-A library for Zodiac signs. Get details on each Zodiac sign, pass a date and know which Zodiac sign it falls in or get a list of all Zodiac signs.
+An npm library for zodiac signs. Get details on each zodiac sign, pass a date and know which zodiac sign it falls in or get a list of all zodiac signs. Now includes Chinese zodiac signs and elements!
 
 ## How to use
 
@@ -19,8 +19,8 @@ Library can either be directly downloaded from the [npm](https://www.npmjs.com/p
 
 By default the npm js registry URL is already pre-configured in your npm installation. So, you should be able to install directly using this command.
 
-```bash
-npm i @clydedsouza/horoscope
+```pwsh
+> npm i @clydedsouza/horoscope
 ```
 
 #### GitHub
@@ -35,8 +35,8 @@ always-auth=true
 
 And then from the command line you'll need to run the installation command.
 
-```bash
-npm i @clydedz/horoscope
+```pwsh
+> npm i @clydedz/horoscope
 ```
 
 ### Usage
