@@ -1,6 +1,6 @@
 {
   "name": "@clydedsouza/horoscope",
-  "version": "0.0.13",
+  "version": "1.0.0",
   "description": "An npm library for zodiac signs. Get details on each zodiac sign, pass a date and know which zodiac sign it falls in or get a list of all zodiac signs. Now includes Chinese zodiac signs and elements!",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
