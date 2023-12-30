@@ -1,3 +1,10 @@
+<div align="center">
+	<br>
+	<img width="172" src="https://raw.githubusercontent.com/ClydeDz/horoscope-npm/main/Icon.png" alt="Horoscope npm package">
+	<br>
+	<br>
+</div>
+
 ## @clydedsouza/horoscope
 
 A library for Zodiac signs. Get details on each Zodiac sign, pass a date and know which Zodiac sign it falls in or get a list of all Zodiac signs.
